@@ -2,6 +2,7 @@ plugins {
     id 'java'
 }
 
+
 group = 'org.sparta'
 version = '1.0-SNAPSHOT'
 
@@ -15,9 +16,14 @@ dependencies {
     // MySQL
     implementation 'mysql:mysql-connector-java:8.0.28'
 
-
+    // JUnit BOM을 사용하여 JUnit 의존성 버전 관리
     testImplementation platform('org.junit:junit-bom:5.9.1')
+
+    // JUnit Jupiter를 사용하여 테스트를 작성
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // 테스트를 위한 라이브러리와 설정을 자동으로 제공
+    testImplementation 'org.springbootframework.boot:spring-boot-starter-test'
 }
 
 test {
